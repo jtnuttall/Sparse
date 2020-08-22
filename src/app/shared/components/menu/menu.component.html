@@ -1,0 +1,53 @@
+<mat-toolbar color="primary" class="titlebar pr-0">
+    <span>Sparse</span>
+
+    <div class="ml-2 h-100 flex">
+        <div>
+            <button mat-flat-button class="h-100 square titlebar-btn" [matMenuTriggerFor]="fileMenu">
+                <mat-icon>insert_drive_file</mat-icon>
+                <span class="ml-1">File</span>
+            </button>
+            <mat-menu #fileMenu="matMenu">
+                <button mat-menu-item (click)="openLog()">
+                    <mat-icon>code</mat-icon>
+                    <span>Open Log..</span>
+                </button>
+            </mat-menu>
+        </div>
+
+        <div>   
+            <button mat-flat-button class="h-100 square titlebar-btn" [matMenuTriggerFor]="raidMenu">
+                <mat-icon>group</mat-icon>
+                <span class="ml-1">Raid</span>
+            </button>
+            <mat-menu #raidMenu="matMenu">
+                <button mat-menu-item>
+                    <mat-icon>dialpad</mat-icon>
+                    <span>Redial</span>
+                </button>
+                <button mat-menu-item disabled>
+                    <mat-icon>voicemail</mat-icon>
+                    <span>Check voice mail</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>notifications_off</mat-icon>
+                    <span>Disable alerts</span>
+                </button>
+            </mat-menu>
+        </div>
+    </div>
+
+    <span class="fill-space"></span>
+
+    <div class="h-100">
+        <button mat-fab color="accent" class="h-100 square no-shadow titlebar-btn" (click)="minimize()">
+            <mat-icon>minimize</mat-icon>
+        </button>
+        <button mat-fab color="accent" class="h-100 square no-shadow titlebar-btn" (click)="maximize()">
+            <mat-icon>maximize</mat-icon>
+        </button>
+        <button mat-fab color="warn" class="h-100 square no-shadow titlebar-btn" (click)="close()">
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
+</mat-toolbar>

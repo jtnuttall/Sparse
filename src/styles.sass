@@ -1,1 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "custom-theme"
+
+div::-webkit-scrollbar-track
+    border-radius: 10px
+    // background-color: $dark-bg-lighter-5
+    background-color: transparent
+
+div::-webkit-scrollbar
+    width: 10px
+    background-color: transparent
+
+div::-webkit-scrollbar-thumb
+    border-radius: 10px
+    background-color: mat-color($theme-accent)
+
+dl
+    display: grid
+    grid-template-columns: 25% auto
+
+dt
+    grid-column: 1
+    font-weight: bolder
+
+dd
+    grid-column: 2
+    text-align: left
+
+app-home
+    flex-grow: 1
+    overflow: auto
+
+.flex
+    display: flex
+
+.flex-columns
+    flex-direction: column
+
+.fill-space
+    flex: 1 1 auto
+
+.h-100
+    height: 100% !important
+
+.w-100
+    width: 100% !important
+
+.pl-0
+    padding-left: 0
+
+.pr-0
+    padding-right: 0 !important
+
+.ml-0
+    margin-left: 0
+
+.ml-1
+    margin-left: 0.25rem
+
+.ml-2
+    margin-left: 1rem

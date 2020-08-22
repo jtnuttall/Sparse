@@ -1,0 +1,16 @@
+<button mat-flat-button class="log-item-btn w-100" (click)="click()">
+    <h3>{{log.actor}}</h3>
+    <span class="filename">{{log.filename}}</span>
+    <dl>
+        <dt>Top DPS</dt>
+        <dd>{{log.topDps | number}}</dd>
+
+        <dt>Top HPS</dt>
+        <dd>{{log.topHps | number}}</dd>
+
+        <dt>Top TPS</dt>
+        <dd>{{log.topTps | number}}</dd>
+    </dl>
+</button>
+
+<mat-divider></mat-divider>

@@ -1,0 +1,21 @@
+<div
+    class="files-pane"
+    mwlResizable
+    [resizeEdges]="{right: true}"
+    (resizing)="onResize($event)"
+    [ngStyle]="style"
+>
+    <mat-progress-spinner
+        class="progress-spinner"
+        *ngIf="loading"
+        mode="determinate"
+        color="accent"
+        [value]="progress | async"
+    ></mat-progress-spinner>
+    
+    <div class="progress-text" *ngIf="loading">
+        <h3>{{progress | async | number}}</h3>
+    </div>
+    
+    <app-log-item *ngFor="let log of logs; trackBy: logTrack" [log]="log"></app-log-item>
+</div>
